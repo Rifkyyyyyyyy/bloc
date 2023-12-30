@@ -17,7 +17,7 @@ class Greeting extends Cubit<String> with GreetingName {
 
   @override
   String goodbye() {
-    emit(state + name);
+    emit(state);
     return 'nice to hear that $state, well goodbye';
   }
 }
@@ -35,8 +35,10 @@ class _BelajarCubitState extends State<BelajarCubit> {
 
   void menyapa() {
     for (var i = 0; i < namaOrang.length; i++) {
-      var person = Greeting(name: namaOrang[i]);
-      data.add(person);
+      if (data.every((person) => person.name != namaOrang[i])) {
+        var person = Greeting(name: namaOrang[i]);
+        data.add(person);
+      }
     }
   }
 
@@ -50,7 +52,6 @@ class _BelajarCubitState extends State<BelajarCubit> {
 
   @override
   void initState() {
-    menyapa();
     super.initState();
   }
 
