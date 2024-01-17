@@ -3,7 +3,9 @@ import 'package:clients/src/core/belajar_api2/api2_ui.dart';
 import 'package:clients/src/core/belajar_api2/api2_ui1.dart';
 import 'package:clients/src/core/bloc_basic/bloc_builder.dart';
 import 'package:clients/src/core/bloc_basic/bloc_builder2.dart';
+import 'package:clients/src/core/bloc_basic/multi_bloc/page2.dart';
 import 'package:clients/src/core/cubit_basic/cubit_state.dart';
+import 'package:clients/src/core/factory/factory_ui.dart';
 import 'package:clients/src/core/stream/stream_builder.dart';
 import 'package:clients/src/core/cubit_basic/cubit_flutter.dart';
 import 'package:clients/src/core/cubit_basic/cubit_flutter2.dart';
@@ -26,7 +28,7 @@ void main() async {
   await Firebase.initializeApp();
   print("After Firebase.initializeApp");
 
-  runApp(const MyAppUI());
+  runApp(const MyCounterUi());
 }
 
 class MyWidget extends StatelessWidget {

@@ -10,7 +10,7 @@ class ApiBloc2 extends Bloc<ProductsEvent, ProductState> {
       emit(ProductAdd());
       await Future.delayed(const Duration(seconds: 1));
       try {
-        await productRepository.create(name: event.name, price: event.price , image: event.image , description:  event.description);
+        await productRepository.create(name: event.name, price: event.price );
         emit(ProductAdded());
       } catch (e) {
         emit(ProductError(e.toString()));

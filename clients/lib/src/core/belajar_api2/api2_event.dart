@@ -8,8 +8,7 @@ abstract class ProductsEvent extends Equatable {
 class Create extends ProductsEvent {
   final String name;
   final String price;
-  final String image;
-  final String description;
+  
 
-  Create({required this.name, required this.price , required this.image , required this.description});
+  Create({required this.name, required this.price ,});
 }

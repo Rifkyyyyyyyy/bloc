@@ -1,5 +1,6 @@
 import 'package:clients/src/core/belajar_api2/api2_bloc.dart';
 import 'package:clients/src/core/belajar_api2/api2_event.dart';
+import 'package:clients/src/core/belajar_api2/api2_state.dart';
 import 'package:clients/src/core/belajar_api2/api2_ui1.dart';
 import 'package:clients/src/repository/product_repo.dart';
 import 'package:flutter/foundation.dart';
@@ -21,6 +22,8 @@ class _HomePageState extends State<HomePage> {
   Future<String> imageData() async {
     return '';
   }
+
+
 
   Future<void> _create() async {
     await showModalBottomSheet(
@@ -75,7 +78,7 @@ class _HomePageState extends State<HomePage> {
 
   void _postData(context) {
     BlocProvider.of<ApiBloc2>(context).add(
-      // Create(name: _nameController.text, price: _priceController.text),
+      Create(name: _nameController.text, price: _priceController.text),
     );
   }
 
@@ -85,6 +88,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: const Center(child: Text('Firebase Firestore')),
         ),
+     
         floatingActionButton: FloatingActionButton(
           onPressed: () => _create(),
           child: const Icon(Icons.add),

@@ -15,6 +15,8 @@ class ProductAdd extends ProductState {
 }
 
 class ProductAdded extends ProductState {
+
+  
   @override
   List<Object> get props => [];
 }

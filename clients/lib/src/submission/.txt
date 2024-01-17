@@ -1,0 +1,10 @@
+Deskripsi Kasus:
+Anda diberi tugas untuk membuat aplikasi pemesanan tiket bioskop 
+menggunakan Flutter BLoC. Aplikasi ini harus dapat menangani pemilihan 
+film, jumlah tiket, dan proses pembayaran.
+
+Pertanyaan:
+a. Rancang class Movie dengan properti seperti judul, genre, dan durasi.
+b. Gambarkan struktur BLoC untuk manajemen pemilihan film dan jumlah tiket.
+c. Implementasikan fungsi untuk menghitung total pembayaran berdasarkan 
+jumlah tiket dan harga tiket per film.

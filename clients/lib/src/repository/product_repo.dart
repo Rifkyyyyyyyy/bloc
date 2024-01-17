@@ -4,9 +4,9 @@ import 'package:flutter/foundation.dart';
 class ProductRepository {
   final _fireCloud = FirebaseFirestore.instance.collection('products');
 
-  Future<void> create({required String name, required String price , required String image , required String description}) async {
+  Future<void> create({required String name, required String price }) async {
     try {
-      await _fireCloud.add({"name": name, "price": price , "image" : image , "description" : description});
+      await _fireCloud.add({"name": name, "price": price });
     } on FirebaseException catch (e) {
       if (kDebugMode) {
         print("fail '${e.code} : ${e.message}'");
